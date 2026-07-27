@@ -1,4 +1,0 @@
-for c in range(0,7,-1):# se colocar por exemplo range(0,7,2) ele vai contar de 2 em 2, ou seja, ele vai contar 0, 2, 4, 6. Se colocar range(0,7,-1) ele vai contar de trás para frente, ou seja, ele vai contar 0, -1, -2, -3, -4, -5, -6. Mas como o passo é negativo e o início é menor que o fim, ele não vai contar nada e o loop não será executado nenhuma vez.
-    print (c)
-print ("Fim")
-    #se o print("Fim") estivesse dentro do for, que é exatamente nessa linha que estou escrevendo ele repetiria 6 vezes também, ou seja, o print("Fim") seria executado 6 vezes, uma para cada iteração do loop. Mas como ele está fora do for, ele só será executado uma vez, depois que o loop terminar.
