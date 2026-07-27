@@ -1,0 +1,6 @@
+Num_1 = int(input("Digite um número: "))
+Descoberta = Num_1 % 2
+if Descoberta == 0 :
+    print("\033[32mO número é par.\033[0m")
+else:
+    print("\033[31mO número é impar.\033[0m")

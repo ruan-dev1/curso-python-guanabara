@@ -1,0 +1,11 @@
+
+import random
+from time import sleep # Sempre no topo
+computador = random.randint(1, 5) # O PC sorteia aqui
+pense = int(input("Pense e digite um número de 1 a 5: "))
+print("Processando...")
+sleep(3) # Pausa de 2 segundos
+if pense == computador:
+    print(f"Parabéns! Eu também pensei no {computador}!")
+else:
+    print(f"Ganhei! Eu pensei no {computador} e não no {pense}.")

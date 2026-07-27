@@ -1,0 +1,22 @@
+from random import randint
+from time import sleep
+tentativas = 0
+computador = randint(1, 10)
+while True:
+    pessoa = int(input("Adivinhe o número que a maquina escolheu (entre 1 e 10): "))
+    tentativas += 1
+    print("Processando...")
+    sleep(2)
+    if pessoa == computador:
+        print(f"\033[32mBoa! Você acertou o número {computador} no total de {tentativas} tentativas!\033[0m")
+        break
+    elif pessoa != computador:
+        
+        print(f"\033[31mVocê errou! Tenta denovo!(tentou {tentativas} vez(es)) \033[0m")
+    
+    dica = input("Quer uma dica? (S/N)").strip().upper()
+    if dica == "S":
+        if pessoa < computador:
+            print("\033[33mDica: O número é maior do que você digitou!\033[0m")
+        else:
+            print("\033[33mDica: O número é menor do que você digitou!\033[0m")

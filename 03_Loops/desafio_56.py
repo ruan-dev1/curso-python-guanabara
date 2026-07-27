@@ -1,0 +1,25 @@
+soma_idades = 0
+homem_velho = ""
+idade_homem_velho = 0
+mulheres_novas = 0
+mulheres = "" # Continua começando vazia
+
+for c in range (1, 5):
+    nome = input(f"Nome da {c}ª pessoa: ")
+    idade = int(input(f"Idade da {c}ª pessoa: "))
+    soma_idades += idade
+    sexo = input(f"Sexo da {c}ª pessoa [M/F]: ").strip().upper()
+    
+    if idade > idade_homem_velho and sexo == "M":
+        idade_homem_velho = idade
+        homem_velho = nome
+        
+    if sexo ==  "F" and idade < 20:
+        mulheres_novas += 1
+        #  A SACADA: Vai colando o nome novo junto com os que já tinham!
+        mulheres += nome + ", " 
+
+print(f"\nA média de idade do grupo é de {soma_idades/4} anos")
+print(f"O homem mais velho tem {idade_homem_velho} anos e se chama {homem_velho}")
+# Ajuste no print para mostrar a lista de nomes acumulados
+print(f"Ao todo são {mulheres_novas} mulheres com menos de 20 anos. São elas: {mulheres}")

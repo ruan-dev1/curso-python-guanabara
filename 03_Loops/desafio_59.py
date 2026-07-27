@@ -1,0 +1,45 @@
+
+from time import sleep
+
+while True:
+    valor1 = int(input("\033[33mDigite o primeiro número: \033[0m"))
+    valor2 = int(input("\033[33mDigite o segundo número: \033[0m"))
+    print("\033[34mEscolha uma opção e digite o número desejado:\033[0m")
+    print("\033[36;1m[1] Somar\033[0m")
+    print("\033[36;1m[2] Multiplicar\033[0m")
+    print("\033[36;1m[3] Maior\033[0m")
+    print("\033[36;1m[4] Novos números\033[0m")
+    print("\033[36;1m[5] Sair do programa\033[0m")
+    opcao = int(input("\033[33mDigite a opção desejada: \033[0m"))
+    if opcao == 1:
+        soma = valor1 + valor2
+        print(
+            "\033[32mVocê escolheu soma! "
+            f"A soma de {valor1} + {valor2} é igual a {soma}\033[0m"
+        )
+        print("\033[32mVamos continuar...\033[0m")
+        sleep(2)
+    elif opcao == 2:
+        multiplicando = valor1 * valor2
+        print(
+            "\033[32mVocê escolheu multiplicação! "
+            f"A multiplicação entre {valor1} * {valor2} é igual a {multiplicando}\033[0m"
+        )
+        print("\033[32mVamos continuar...\033[0m")
+        sleep(2)
+    elif opcao == 3:
+        maior = valor1 if valor1 > valor2 else valor2
+        print(
+            "\033[32mVocê escolheu verificar o maior número! "
+            f"O maior número entre {valor1} e {valor2} é {maior}\033[0m"
+        )
+        print("\033[32mVamos continuar...\033[0m")
+        sleep(2)
+    elif opcao == 4:
+        print("\033[32mVamos digitar novos números...\033[0m")
+        sleep(2)
+    elif opcao == 5:
+        print("\033[32mVocê escolheu sair do programa! Até logo!\033[0m")
+        break
+    else:
+        print("\033[31mOpção inválida! Tente novamente.\033[0m")

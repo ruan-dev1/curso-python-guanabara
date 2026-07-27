@@ -1,0 +1,8 @@
+primeiro = int(input("Digite o primeiro termo "))
+razao = int(input("Digite a razão do PA "))
+decimo = primeiro + (10 - 1) * razao
+termo_atual = primeiro
+print("Os 10 primeiros termos são")
+for c in range (primeiro,decimo + razao, razao):
+    print(f"{termo_atual}",end = "-->")
+    termo_atual += razao

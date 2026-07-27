@@ -1,0 +1,5 @@
+preco = float(input('Quanto tá o preço desse produto? '))
+liquida = float(preco * 5 / 100)
+sub = float(preco - liquida)
+preço = '50 Reais'
+print('O preço desse produto é R${},\n mais como está na promoção de 5% de desconto vai sair por R${:.2f}'.format(preço, sub))

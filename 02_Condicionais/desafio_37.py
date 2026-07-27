@@ -1,0 +1,14 @@
+Numero = int(input("Digite um numero inteiro: "))
+print(
+    f"O numero que você digitou é {Numero}\n Você tem três opcões, escolha apenas uma delas:\n \033[1;32m1 =  BINÁRIO \033[0m\n \033[1;33m2 = OCTAL \033[0m\n \033[1;34m3 = HEXADECIMAL \033[0m[...]
+opção = str(input("Digite a opção desejada: ")).strip().upper()
+if opção == "1" or opção == "BINÁRIO":
+    print(f"\033[32mO numero {Numero} convertido para BINÁRIO é {bin(Numero)[2:]}\033[0m")
+elif opção == "2" or opção == "OCTAL":
+    print(f"\033[33mO numero {Numero} convertido para OCTAL é {oct(Numero)[2:]}\033[0m")
+elif opção == "3" or opção == "HEXADECIMAL":
+    print(f"\033[34mO numero {Numero} convertido para HEXADECIMAL é {hex(Numero)[2:]}\033[0m")
+else:
+    print("\033[31mOpção inválida. Por favor, escolha uma das opções disponíveis.\033[0m")
+
+    #caso queira fatiar tem que ser fazer isso [:2] para retirar o 0b, 0o ou 0x que aparece na conversão.
