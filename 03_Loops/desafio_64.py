@@ -1,0 +1,10 @@
+cont = 0
+soma = 0
+while True:
+    n = int(input("\033[1mDigite um número inteiro (999 para parar):\033[0m "))
+    if n != 999:
+        soma += n
+        cont += 1
+    else:
+        print(f"\033[32mO total de números digitados foi {cont} e a soma entre eles é {soma}.\033[0m")
+        break

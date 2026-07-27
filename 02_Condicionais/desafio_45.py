@@ -1,0 +1,45 @@
+from random import choice 
+from time import sleep 
+
+print("-"* 30) 
+print("\033[1;33mJOKENPÔ\033[0m".center(40)) 
+print("-"* 30) 
+
+print("\033[1;32m Vamos Jogar Jokenpô! Escolha uma opção:\033[0m\n") 
+sleep(2) 
+
+print("\033[1;34m1 - Pedra\033[0m\n") 
+print("\033[1;35m2 - Papel\033[0m\n") 
+print("\033[1;36m3 - Tesoura\033[0m\n") 
+
+escolha = (input("\033[1;32mVamos jogar! Qual você vai escolher: \033[0m")).strip().upper() 
+print("\033[1;33mAguardando a escolha do computador...\033[0m\n") 
+sleep(2) 
+
+print("\033[1;33mJO\033[0m") 
+sleep(1)
+print("\033[1;33mKEN\033[0m")
+sleep(1)
+print("\033[1;33mPÔ!\033[0m\n")
+computador = choice(["pedra", "papel", "tesoura"]).upper() 
+
+# EMPATE: Repare nos parênteses isolando cada par de número e palavra
+if escolha == computador or (escolha == "1" and computador == "PEDRA") or (escolha == "2" and computador == "PAPEL") or (escolha == "3" and computador == "TESOURA"): 
+    print(f"\033[1;33m EU TAMBÉM ESCOLHI {computador}, EMPATE!\033[0m") 
+ 
+# VITÓRIAS: O parênteses junta as duas opções do jogador (Texto OR Número) antes do AND
+elif (escolha == "PEDRA" or escolha == "1") and computador == "TESOURA": 
+    print(f"\033[1;32m DROGA, EU ESCOLHI {computador}, VOCÊ VENCEU!\033[0m") 
+
+elif (escolha == "PAPEL" or escolha == "2") and computador == "PEDRA": 
+    print(f"\033[1;32m DROGA, EU ESCOLHI {computador}, VOCÊ VENCEU!\033[0m") 
+
+elif (escolha == "TESOURA" or escolha == "3") and computador == "PAPEL": 
+    print(f"\033[1;32m AHHHH! EU ESCOLHI {computador}, VOCÊ VENCEU!\033[0m") 
+
+# INVÁLIDO: Sem parênteses bagunçados aqui
+elif escolha != "PEDRA" and escolha != "PAPEL" and escolha != "TESOURA" and escolha != "1" and escolha != "2" and escolha != "3": 
+    print("\033[1;31m OPÇÃO INVÁLIDA! POR FAVOR, ESCOLHA ENTRE PEDRA, PAPEL OU TESOURA.\033[0m") 
+
+else: 
+    print(f"\033[1;31m HAHAHA! EU ESCOLHI {computador}, VOCÊ PERDEU!\033[0m")

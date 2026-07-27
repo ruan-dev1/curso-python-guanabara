@@ -1,0 +1,11 @@
+from time import sleep
+print("\033[32;1mVou contar de 1 até 50 mais somente os números pares!:\033[0m")
+input("Ok? ")
+print("\033[32;1mFechou! Vou iniciar!\033[0m")
+sleep(2)
+
+for c in range(0, 51, 2):
+    print(c)
+    sleep(0.5)
+    print("--"*20)
+print("\033[32;1mAcabou! Espero que tenha gostado!\033[0m")

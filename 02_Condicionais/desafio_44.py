@@ -1,0 +1,43 @@
+"""Payment options calculator."""
+from time import sleep
+
+price = float(input("\033[34mDigite o preço do produto: R$ \033[0m"))
+print("\033[34mCalculando formas de pagamento...\033[0m")
+sleep(2)
+print("\033[1;32m1 - à vista\033[0m")
+print("\033[1;32m2 - à vista no cartão\033[0m")
+print("\033[1;32m3 - 2x no cartão\033[0m")
+print("\033[1;32m4 - 3x ou mais no cartão\033[0m")
+print("Esperando sua decisão...")
+sleep(3)
+forma = int(
+    input("\033[34mDigite a forma de pagamento: (1, 2, 3 ou 4) \033[0m"))
+if forma == 1:
+    desconto = price * 0.10
+    final_price = price - desconto
+    print(f"\033[32mO preço final do produto é de R${final_price:.2f}\033[0m")
+elif forma == 2:
+    desconto = price * 0.05
+    final_price = price - desconto
+    print(f"\033[32mO preço final do produto é de R${final_price:.2f}\033[0m")
+elif forma == 3:
+    final_price = price / 2
+    print(
+        f"\033[32mO preço do produto parcelado em 2x é de "
+        f"R${final_price:.2f}\033[0m")
+    print(f"\033[32mO preço final do produto é de R${price:.2f}\033[0m")
+elif forma == 4:
+    parcelas = int(input("\033[34mQuantas parcelas? \033[0m"))
+    print("\033[34mCalculando preço parcelado...\033[0m")
+    sleep(2)
+    juros = price * 0.20
+    final_price = price + juros
+
+    print(
+        f"\033[32mO preço do produto parcelado em {parcelas}x é de "
+        f"R${final_price/parcelas:.2f}\033[0m")
+
+    print(f"\033[32mO preço final do produto é de R${final_price:.2f}\033[0m")
+
+else:
+    print("\033[31mOpção inválida, tente novamente.\033[0m")
