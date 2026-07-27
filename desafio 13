@@ -1,0 +1,6 @@
+que = float(input('Quanto vc ganha? '))
+aumento = float(que * 15)
+bah = float(aumento / 100)
+bah2 = float(que + bah)
+q = '15%'
+print('Parabéns você recebeu um aumento no seu salário, de R${}, foi pra R${:.2f}!'.format(q, bah2))

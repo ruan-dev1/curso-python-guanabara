@@ -1,0 +1,3 @@
+din = float(input('Quando de dinheiro em reais vc tem? R$ '))
+dollar = int(din / 3.27)
+print('Com R${} voce pode comprar {}{:.2f}'.format(din, 'US$', dollar))

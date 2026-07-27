@@ -1,0 +1,2 @@
+gogli = str(input("salve, qual teu nome? "))
+print(f"a letra a do seu nome ta localizada em {gogli.lower().find('a')}")

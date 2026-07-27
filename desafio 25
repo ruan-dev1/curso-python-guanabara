@@ -1,0 +1,3 @@
+nome = str(input("Qual o seu nome? ")).strip()     
+sla = "Seu Nome tem Silva?:"      
+print(sla,('SILVA' in nome.upper()))

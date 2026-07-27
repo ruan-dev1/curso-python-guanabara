@@ -1,0 +1,5 @@
+Distancia = float(input("Digite Qual a distância de sua viajem: "))
+if Distancia <= 200:
+    print(f"O valor da sua passagem é de R$ \033[32m{Distancia*0.50:.2f}\033[0m")
+else:
+    print(f"O valor da sua passagem é de R$ \033[31m{Distancia*0.45:.2f}\033[0m")

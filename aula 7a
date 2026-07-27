@@ -1,0 +1,6 @@
+print(9**(1/2)) #raiz quadrada de 9
+print(9**(1/3)) #raiz cúbica de 9
+print(19//2) #divisão inteira de 19 por 2
+print(7+3*4) #ordem de precedência: primeiro a multiplicação, depois a soma
+print((7+3)*4) #com parênteses, a soma é feita primeiro
+

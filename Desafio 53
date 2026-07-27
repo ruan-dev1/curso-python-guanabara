@@ -1,0 +1,11 @@
+print("\033[32m--\033[0m"*50)
+frase = input("Digite uma frase ").strip().upper()
+junto = frase.replace(" ", "")
+inverter = junto[::-1]
+
+if junto == inverter:
+    print(f"\033[32m A frase {frase} é um palíndromo! pois ao contrario é a mesma coisa!({inverter})\033[0m")
+else:
+    print(f"\033[31mA frase {frase} não é um palíndromo pois ao contrario não é a mesma coisa!({inverter})\033[0m")
+    #você também pode usar a função reversed() para inverter a string, mas o resultado será um objeto iterável, então você precisará convertê-lo de volta para uma string usando ''.join().
+    

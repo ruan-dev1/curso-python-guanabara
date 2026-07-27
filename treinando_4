@@ -1,0 +1,53 @@
+import random
+import time
+
+# Dicionário de cores que você domina!
+cores = {
+    'limpa': '\033[m',
+    'verde': '\033[32m',
+    'amarelo': '\033[33m',
+    'azul': '\033[36m',
+    'vermelho': '\033[31m',
+    'cinza': '\033[90m'
+}
+
+print(f"{cores['amarelo']}-={cores['limpa']}" * 25)
+print(f"{cores['azul']}   SISTEMA DE JOGOS: ADIVINHAÇÃO SUPER MONSTRO{cores['limpa']}")
+print(f"{cores['amarelo']}-={cores['limpa']}" * 25)
+
+# O computador pensa em um número de 1 a 10
+computador = random.randint(1, 10)
+vidas = 3
+pontos = 100
+
+print(f"{cores['cinza']}O computador pensou em um número de 1 a 10... Você tem {vidas} vidas.{cores['limpa']}\n")
+
+# SPOILER DO MUNDO 2: O laço 'while' faz o jogo rodar enquanto você tiver vidas!
+while vidas > 0:
+    chute = int(input(f"{cores['azul']}Qual é o seu palpite? {cores['limpa']}"))
+    print(f"{cores['cinza']}PROCESSANDO...{cores['limpa']}")
+    time.sleep(1)
+
+    if chute == computador:
+        print(f"\n{cores['verde']}🏆 ACERTOU EM CHEIO, PAEE! Você destruiu o computador!{cores['limpa']}")
+        print(f"{cores['verde']}Pontuação Final: {pontos} pontos!{cores['limpa']}")
+        break # Para o jogo na hora porque você ganhou!
+    else:
+        vidas -= 1 # Perde uma vida
+        pontos -= 30 # Perde pontos
+        print(f"{cores['vermelho']}ERROU!{cores['limpa']} ", end="")
+        
+        if vidas > 0:
+            # Dica baseada no chute
+            if chute > computador:
+                print(f"O número secreto é {cores['amarelo']}MENOR{cores['limpa']} que {chute}.")
+            else:
+                print(f"O número secreto é {cores['amarelo']}MAIOR{cores['limpa']} que {chute}.")
+            print(f"Você ainda tem {cores['verde']}{vidas} vidas{cores['limpa']}.\n")
+        else:
+            print(f"\n{cores['vermelho']}💀 GAME OVER! Suas vidas acabaram.{cores['limpa']}")
+            print(f"O número correto era: {cores['amarelo']}{computador}{cores['limpa']}")
+
+print(f"\n{cores['amarelo']}-={cores['limpa']}" * 25)
+print(f"{cores['azul']}           OBRIGADO POR JOGAR, BRO!{cores['limpa']}")
+print(f"{cores['amarelo']}-={cores['limpa']}" * 25)

@@ -1,0 +1,9 @@
+nota_1 = float(input("Digite a sua primeira nota: "))
+nota_2 = float(input("Digite a sua segunda nota: "))
+media = (nota_1 + nota_2) /2
+if media < 5:
+    print(f"\033[31mSua média é {media:.1f} e você foi reprovado!\033[0m")
+elif media >= 5 and media < 7.0:
+    print(f"\033[31mSua média é {media:.1f} e você ficou de recuperação!\033[0m")
+elif media >= 7.0:
+    print(f"\033[32mSua média é {media:.1f} e você foi aprovado!\033[0m")

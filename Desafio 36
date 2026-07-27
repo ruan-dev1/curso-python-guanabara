@@ -1,0 +1,10 @@
+casa = float(input("Digite o valor da casa que deseja comprar: R$ "))
+salario = float(input("Digite o valor do SEU salário: R$ "))
+prestacao = float(input("Em quantos anos você pretende pagar esta casa? "))
+soma2 = salario * 0.3
+soma = prestacao * 12
+final = (casa / soma)
+if final > soma2:
+    print("\033[31mInfelizmente, o empréstimo foi negado.\033[0m")
+else:
+    print("\033[32mParabéns, o empréstimo foi aprovado!\033[0m")

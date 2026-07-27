@@ -1,0 +1,12 @@
+nome = str(input("Digite seu nome: "))
+if nome == "Gustavo":
+    print("Olá, Gustavo!")
+elif nome == "Pedro" or nome == "Maria" or nome == "Ana":
+    print("Seu nome é bem popular no Brasil!")
+elif nome in ["Juliana", "Rafaela", "Nelly"]:
+    print("Belo Nome Feminino!")
+
+else:
+    print("Olá, seu nome é bem normal!")
+   
+    print("Tenha um bom dia!")

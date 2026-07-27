@@ -1,0 +1,8 @@
+sexo = input("\033[33mDigite o sexo da pessoa [M/F]: \033[0m").strip().upper()
+
+#  O loop só começa se o cara digitar algo DIFERENTE de M e de F!
+while sexo not in ["M", "F"]:
+    print("\033[31mEntrada inválida. Por favor, digite M ou F.\033[0m")
+    sexo = input("\033[33mDigite novamente o sexo [M/F]: \033[0m").strip().upper()
+
+print("\033[32mSexo registrado com sucesso!\033[0m")

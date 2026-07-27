@@ -1,0 +1,58 @@
+"""Programa para exibir termos de uma progressão aritmética (PA)."""
+
+c = 1
+n = int(input("Digite o primeiro termo: "))    
+r = int(input("Digite a razão da PA: "))
+
+cores = {
+    "amarelo": "\033[1;33m",
+    "verde": "\033[1;32m",
+    "azul": "\033[1;34m",
+    "vermelho": "\033[1;31m",
+    "limpa": "\033[m"
+}
+
+# 🌟 Guardamos quantos termos já foram mostrados no total
+total_termos = 10
+
+# Primeiros 10 termos (Idêntico ao seu, só mudamos o limite para a variável)
+while c <= total_termos:
+    if c < total_termos:
+        print(f"{cores['amarelo']}{n}{cores['limpa']}", end=" --> ")
+    else:
+        print(f"{cores['amarelo']}{n}{cores['limpa']}")
+    n += r
+    c += 1
+
+# Loop principal das perguntas extras
+while True:
+    p = str(input("\nVocê gostaria de ver mais termos dessa PA? [S/N]: ")).upper().strip()
+    
+    if p in ["SIM", "S"]:
+        termos_a_mais = int(input("Beleza! Quantos termos você quer ver a mais? "))
+        
+        # 🌟 A SACADA: Somamos os novos termos no total acumulado!
+        total_termos += termos_a_mais
+        
+        # O loop continua de onde o 'c' parou até o novo total!
+        while c <= total_termos:
+            if c < total_termos:
+                print(f"{cores['amarelo']}{n}{cores['limpa']}", end=" --> ")
+            else:
+                print(f"{cores['amarelo']}{n}{cores['limpa']}")
+            n += r
+            c += 1
+            
+    elif p in ["NÃO", "NAO", "N"]:
+        print(
+            f"{cores['verde']}Ok! Paramos por aqui. "
+            f"Ao todo foram mostrados {total_termos} termos. Até mais!{cores['limpa']}"
+        )
+        break # 🔥 Só quebra o programa se ele disser NÃO!
+        
+    else:
+        # Se digitar errado, o loop dá a volta e pergunta de novo sem quebrar!
+        print(
+            f"{cores['vermelho']}Opção Inválida! "
+            f"Por favor, digite apenas SIM ou NÃO.{cores['limpa']}"
+        )

@@ -1,0 +1,5 @@
+s = 0 
+for c in range(1, 5):
+    n = int(input("Digite um valor"))
+    s += n #s = s + n, ou seja, a variável s recebe o valor atual de s mais o valor de n. O operador += é uma forma abreviada de escrever isso, ou seja, s += n é equivalente a s = s + n. Dessa forma, a cada iteração do loop, o valor de n é adicionado à variável s, acumulando a soma dos valores digitados pelo usuário. No final do loop, a variável s conterá a soma total de todos os valores digitados.
+print(f"A soma de todos os valores é: {s}")

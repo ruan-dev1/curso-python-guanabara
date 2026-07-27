@@ -1,0 +1,8 @@
+km = float(input('Quantos KM você percorreu com este carro? '))
+soma = float (0.15*km)
+dia = float(input('Quantos dias você ficou com esse mesmo carro? '))
+soma2 = float (60*dia)
+soma3 = float(soma) + float(soma2)
+print('Blza, calculando e somando os dois, o valor total ao pagar é R${:.2f}'.format(soma3))
+#ou pode ser feito assim:
+#print(f'Blza, calculando e somando os dois, o valor total a pagar é R${soma3:.2f}')

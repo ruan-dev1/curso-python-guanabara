@@ -1,0 +1,12 @@
+fatorial = 1
+n_original = int(input("\033[33mDigite um número qualquer \033[0m"))
+n = n_original
+while n > 0:
+    if n > 1:
+        print(f"{n} x ", end="")
+    else: 
+        print(f"{n} = ", end="")
+    fatorial *= n  
+    n -= 1
+    
+print(f"\033[32m{fatorial}\033[0m")

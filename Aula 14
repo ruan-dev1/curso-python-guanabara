@@ -1,0 +1,15 @@
+#r = "S"
+#while r == "S":
+#    n = int(input(f"Digite qualquer valor: "))
+#    r = str(input(f"Vai querer continuar o programa? [S/N]")).strip().upper()
+#print ("Fim do programa")
+n = 1
+par = impar = 0
+while n != 0: #enquanto n for diferente de 0, o programa vai continuar pedindo para o usuário digitar um valor. Quando o usuário digitar 0, o programa vai parar.
+    n = int(input("Digite um valor: "))
+    if n != 0:
+        if n %2 == 0:
+            par += 1
+        else: impar += 1
+
+print(f"Acabou! Foram digitados {par} números pares e {impar} números ímpares.")

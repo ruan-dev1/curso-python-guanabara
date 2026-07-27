@@ -1,0 +1,3 @@
+nome = str(input("EAE MEU MANO! Me fala teu nome completo ae que eu te falo o primeiro e o seu ultimo nomee! ")).strip()
+Separar= (nome.upper().split ())
+print(f"Yo, teu ultimo nome é {Separar[-1]} e o teu primeiro é {Separar[0]}, MEU MANO!")
