@@ -1,4 +1,0 @@
-sla = int(input("Qual sua idade? "))
-if sla >= 18:
-    print("Vc pode assistir o filme")
-else: print("Vc não pode assistir o filme")
