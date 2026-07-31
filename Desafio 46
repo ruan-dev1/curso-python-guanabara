@@ -1,8 +1,0 @@
-from time import sleep
-print(">>"*20)
-print("Contegem regressiva para o estouro dos fogos de artifício!")
-for c in range( 10,-1,-1):
-    print(c)
-    sleep(1)
-    print("\033[32m >>"*20+"\033[0m")
-print("\033[31m🔥🧨BOOOOOOOOOOOOOOOM! HAHA!\033[0m ")
