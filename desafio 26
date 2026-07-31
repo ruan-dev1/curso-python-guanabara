@@ -1,5 +1,0 @@
-p = str(input("Me fale uma frase qualquer: ")).strip()
-l1 =(p.upper().count('A'))
-l2 = (p.upper().find('A')+1)
-l3 = (p.upper().rfind('A')+1)
-print (f"Sua frase tem frase tem no total {l1} letras 'A'.\n A posição que ela aparece pela primeira vez é {l2}.\n Agora a posição que ela aparece pela ultima vez é {l3}. MEUS MANOS!")
