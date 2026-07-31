@@ -1,5 +1,0 @@
-sla = int(input("Qual a velocidade do seu carro? "))
-if sla > 80:
-    print("MULTADO! Você excedeu o limite.")
-else:
-    print( "Dirija com segurança!")
