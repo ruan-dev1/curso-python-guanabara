@@ -1,6 +1,0 @@
-
-cateto1 = float(input('Digite o valor do cateto oposto: '))
-cateto2 = float(input('Digite o valor do cateto adjacente: '))
-soma = cateto1**2 + cateto2**2
-hipotenusa : float = pow(soma, 1/2)
-print(f'A hipotenusa vai dar: {hipotenusa:.2f}')
